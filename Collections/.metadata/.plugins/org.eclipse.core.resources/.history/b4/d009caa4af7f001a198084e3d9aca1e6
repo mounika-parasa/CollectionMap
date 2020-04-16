@@ -1,0 +1,30 @@
+package collections;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class MapMain {
+
+	public static void main(String[] args) throws ParseException {
+		// TODO Auto-generated method stub
+		SimpleDateFormat sdf= new SimpleDateFormat("DD-MM-YYYY");
+		Employee e1 = new Employee(1, "Bargav", 23000.00,"abc@gmail.com");
+	     Employee e2 = new Employee(2, "Anudeep",21000.00,"hello!@gmail.com");
+	     Employee e3 = new Employee(3, "Bhanupratap", 22000.00,"xyz@gmail.com");
+	     
+	     Project p1 = new Project(1,"pro1",sdf.parse("02-03-2020"),sdf.parse("02-04-2020"));
+	     Project p2 = new Project(2,"pro2",sdf.parse("01-03-2020"),sdf.parse("01-04-2020"));
+	     Project p3 = new Project(3,"pro3",sdf.parse("03-03-2020"),sdf.parse("03-04-2020"));
+	      
+	    Map<Project,Employee> map= new HashMap<Project, Employee>(); 
+	    map.put(p1, e1);
+	    map.put(p2, e2);
+	    System.out.println(map);
+
+	}
+
+}

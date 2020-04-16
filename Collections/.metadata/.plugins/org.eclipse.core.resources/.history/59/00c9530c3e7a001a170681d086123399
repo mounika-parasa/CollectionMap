@@ -1,0 +1,13 @@
+package customerssss;
+
+import java.util.Date;
+
+public class Customer {
+	int custid;
+	String custname;
+	String email;
+	String mobile;
+	Date date;
+	Address address;
+
+}
